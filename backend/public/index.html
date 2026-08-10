@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with login and registration form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navigation">
+
+        <div class="nav-blur">
+            <nav class="navigation">
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="about">About</a>
+                <a href="#" data-page="services">Services</a>
+                <a href="#" data-page="contact">Comments</a>
+                <button class="btn-logout">Sair</button>
+            </nav>
+
+            <button class="btnLogin-popup">Login</button>
+        </div>
+    </header>
+
+    <div class="pages">
+        <section class="page home active">
+
+            <h1>Exploração e Mitigação de Vulnerabilidades Web</h1>
+
+            <p>
+                Plataforma desenvolvida para demonstração de vulnerabilidades,
+                exploração em ambiente controlado e aplicação de técnicas de
+                mitigação seguindo recomendações da OWASP.
+            </p>
+
+            <div class="buttons">
+
+                <button>Iniciar Demonstração</button>
+
+                <button>Ver Vulnerabilidades</button>
+
+            </div>
+
+        </section>
+
+        <section class="page about">
+
+            <h1>Sobre o Projeto</h1>
+
+            <p>
+                Este projeto foi desenvolvido como Trabalho de
+                Conclusão de Curso em Engenharia de Software.
+                Seu principal objetivo é demonstrar, em ambiente
+                controlado, técnicas de exploração de
+                vulnerabilidades web e suas respectivas
+                mitigações.
+            </p>
+
+            <div class="about-cards">
+
+                <div class="card">
+                    <h3>🎯 Objetivo</h3>
+
+                    <p>
+                        Demonstrar ataques e técnicas
+                        de proteção seguindo as boas
+                        práticas da OWASP.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🛠 Tecnologias</h3>
+
+                    <p>
+                        HTML, CSS, JavaScript,
+                        PHP, MySQL,
+                        Laravel e Kali Linux.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>📖 Público</h3>
+
+                    <p>
+                        Estudantes, professores e
+                        profissionais interessados
+                        em Segurança da Informação.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="page services">
+
+            <h1 class="title-services">Laboratórios</h1>
+
+            <p>
+                Escolha um laboratório para estudar uma vulnerabilidade
+                em ambiente controlado.
+            </p>
+
+            <div class="cards">
+                <div class="comment-box">
+                    <h2>Deixe seu comentário</h2>
+
+                    <form action="#">
+                        <div class="input-box">
+                            <input type="text" required>
+                            <label>Seu nome</label>
+                        </div>
+
+                        <textarea placeholder="Escreva seu comentário..." required></textarea>
+
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="page contact">
+
+            <!-- Só aparece se o usuário logado for admin -->
+            <div class="admin-comments-section">
+                <h2 class="admin-title"> Comentários recebidos</h2>
+                <div class="admin-comments"></div>
+            </div>
+
+        </section>
+
+        <div class="wrapper">
+            <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">I agree to the terms & conditions</label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
