@@ -52,12 +52,15 @@ router.post("/login", async (req, res) => {
   }
 
   try {
-    const [rows] = await pool.query(
-      "SELECT id, username, password_hash, role FROM users WHERE email = ?",
-      [email]
-    );
+     const sql = `
+      SELECT id, username, password_hash, role
+      FROM users
+      WHERE email = '${email}'
+ `;
 
-    const user = rows[0];
+     const [rows] = await pool.query(sql);
+
+     const user = rows[0];
 
     // ⚠️ Comparação direta de texto puro (proposital, versão vulnerável)
     if (!user || password !== user.password_hash) {

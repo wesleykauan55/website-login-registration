@@ -1,8 +1,19 @@
 # Dependências
 node_modules/
+backend/node_modules/
+
+# Banco de dados local
+backend/site_db.sqlite
+backend/*.sqlite
+backend/*.db
+
+# Arquivos de backup
+*.save
 
 # Variáveis de ambiente
 .env
+.env.*
+!.env.example
 
 # Logs
 *.log
@@ -10,6 +21,6 @@ node_modules/
 # VS Code
 .vscode/
 
-# Sistema
+# Sistema operacional
 .DS_Store
 Thumbs.db
